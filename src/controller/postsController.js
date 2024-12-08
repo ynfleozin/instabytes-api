@@ -33,7 +33,7 @@ export async function uploadImage(req, res){
 
 export async function updateNewPost(req, res){
     const id = req.params.id;
-    const imgUrl = `http://localhost:3000/${id}.png`;
+    const imgUrl = `https://instabytes-api-66028862719.southamerica-east1.run.app/${id}.png`;
     try{
         const imgBuffer = fs.readFileSync(`uploads/${id}.png`);
         const description = await generateDescriptionGemini(imgBuffer);
